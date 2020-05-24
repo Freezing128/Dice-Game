@@ -1,7 +1,7 @@
 # Dice Game
 JavaScript Dice game in the style of Kingdom Come: Deliverance
 
-As you might know (assuming that you played KCD), there's a little dice minigame in KDC that offers the player to make a lot of in-game money, that is also somewhat entertaining and relaxing to play. 
+As you might know (assuming that you played KCD), there's a little dice minigame in KCD that offers the player to make a lot of in-game money, that is also somewhat entertaining and relaxing to play. 
 
 Since I'm learning JavaScript at the moment, I decided to make myself a similar game from scratch in form of a simple web app. I took it as a practice of basic DOM manipulation and also a slight challenge to come up with the right algorithm that runs the game. At some parts, the code might seem a bit tryhard (e.g. usage of binary search inside the function assigning score for combos), but overall the code is nothing complex, as I'm not that experienced with JS yet.  
 
