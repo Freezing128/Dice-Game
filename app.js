@@ -127,10 +127,10 @@ document.querySelector('.btn-roll').addEventListener('click',function() {
         }
         // No scoreable options were found, so the player switches
         if((twos < minCount) && (threes < minCount) && (fours < minCount) && (sixes < minCount)) {
+            rolled = false;
             switchPlayer();
             document.querySelector('#turn-info').textContent = 'Smůla! Hráč ' + (activePlayer + 1) + ' přebírá tah';
             document.querySelector('#turn-info').style.color = '#fcd46f';
-            rolled = false;
             timesRolled = 0;
         }
     } 
