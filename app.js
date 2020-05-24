@@ -1,5 +1,6 @@
-/* Dice game based on KCD variant
- * JS aimed at basics & DOM manipulation
+/*** 
+ * Dice game based on KCD variant
+ * Made in order to practice basics of JS && DOM manipulation
  * @Author: Freezing
  * @Date: 13/05/2020
  */
