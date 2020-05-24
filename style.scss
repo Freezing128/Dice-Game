@@ -1,0 +1,168 @@
+@import 'mixins';
+$activeColor: #fcd46f;
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+@import 'grid';
+
+body {
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.container {
+    background-color:rgba($color: #000000, $alpha: .75);
+}
+header 
+{
+    background-color:rgba($color: #000000, $alpha: .75);
+    max-width: 1440px;
+    overflow: hidden;
+    margin: 80px auto 0 auto;
+    @include responsive_display_laptop {
+        margin: 0 auto;
+        padding: 0 20px 0 20px;
+    }
+    text-align: center;
+    padding: 0px 40px 0px 40px;
+    box-sizing: border-box;
+    h1 {
+        @include universalFont(300%, 200);
+        margin: 20px 0 10px 0;
+        @include responsive_display_tablet {
+            margin: 10px 0 5px 0;
+        }
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: #fff;
+    }
+    h2 {
+        @include universalFont(100%, 200);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #fff;
+        display: none;
+    }
+}
+.dice-wrapper {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.dice-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    .dice-board-item {
+        background: none;
+        width: 100px;
+        margin: 10px;
+        height: 100px;
+    }
+}
+.player-0-panel {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    background-color:rgba($color: #000000, $alpha: .75);
+    height: 160px;
+    h2 {
+        display: block;
+        @include universalFont(200%, 300);
+        width: 300px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+.player-1-panel {
+    @extend .player-0-panel;
+}
+.player-0-score {
+    box-sizing: border-box;
+    @include universalFont(300%, 300);
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 65px;
+}
+.player-1-score {
+    @extend .player-0-score;
+}
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px auto 20px auto;
+    width: 300px;
+    @include responsive_display_cellphone {
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    span {
+        @include universalFont(100%, 300);
+        color: #ddd;
+        text-align: center;
+        margin: 5px 0 5px 0;
+        letter-spacing: 1px;
+    }
+}
+button {
+    @include universalFont(150%, 300);
+    color: #ddd;
+    background: none;
+    border: none;
+    margin: 10px;
+    @include responsive_display_cellphone {
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: font-weight 0s, transform 0.5s, color 0.5s;
+}
+button:hover { 
+    color: $activeColor;
+    font-weight: 400; 
+    transform: translateX(5px);
+}
+button:focus {
+    outline: none;
+}
+.btn-start {
+    margin: 0;
+}
+#set-score {
+    width: 80px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 100%;
+}
+
+.active { 
+    box-shadow: inset 1px 1px 4px lighten($activeColor, $amount: 7%), 
+                inset -1px -1px 4px lighten($activeColor, $amount: 7%);
+    background-color: rgba($color:#fff, $alpha: .1);
+}
+.active .player-name { font-weight: 400; }
+
+.active .player-name::after {
+    content: "\2022";
+    color: $activeColor;
+    box-sizing: border-box;
+    
+}
+
+.picked-dice {
+    box-shadow: 2px 2px 5px darken($activeColor, $amount: 7%),
+                -2px -2px 5px darken($activeColor, $amount: 7%),
+                -2px 2px 5px darken($activeColor, $amount: 7%),
+                2px -2px 5px darken($activeColor, $amount: 7%);
+}

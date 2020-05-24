@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- End Meta Tags -->
+        <title>Kostky</title>
+        <!-- Styles -->
+        <link rel="stylesheet" href="style.css">
+        <!-- End Styles -->
+
+    </head>
+    <body>
+        <header>
+            <h1>Kostky</h1>
+            <h2 id="turn-info">Na tahu je Hráč 1</h2>
+        </header>
+        <!-- Page Content-->
+        <div class="content-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-large-12 dice-wrapper">
+                        <!-- Start Button -->
+                        <div class="btn-container">
+                            <button class="btn-start">Spustit hru</button>
+                        </div> <!-- End Start Button -->
+                        <div class="dice-board">
+                            <img onclick="pickDice(this)" class="dice-board-item" id="dice-0" src="dice-1.png" style="width: 0;">
+                            <img onclick="pickDice(this)" class="dice-board-item" id="dice-1" src="dice-2.png" style="width: 0;">
+                            <img onclick="pickDice(this)" class="dice-board-item" id="dice-2" src="dice-3.png" style="width: 0;">
+                            <img onclick="pickDice(this)" class="dice-board-item" id="dice-3" src="dice-4.png" style="width: 0;">
+                            <img onclick="pickDice(this)" class="dice-board-item" id="dice-4" src="dice-5.png" style="width: 0;">
+                        </div>
+                        <!-- Additional Buttons -->
+                        <div class="btn-container">
+                            <button class="btn-roll">Vrhnout kostky</button>
+                            <button class="btn-hold">Podržet tah</button>
+                            <span>Bodový limit</span>
+                            <input id="set-score" type="text" name="set-score" palceholder="2000" value="2000" onfocus="this.placeholder = ''" onblur="this.placeholder = '2000'" style="color: #333;"> 
+            
+                        </div> <!-- End Additional Buttons -->
+                    </div>
+                </div>
+                <div class="row">
+                </div>
+                <div class="row clear-side-padding">
+                    <div class="col col-large-6 col-small-12 player-0-panel">
+                        <h2 id="name-0" class="player-name">Hráč 1</h2>
+                        <div id="score-0" class="player-0-score">0</div>
+                    </div>
+                    <div class="col col-large-6 col-small-12 player-1-panel">
+                        <h2 id="name-1" class="player-name"><span>Hráč 2</span></h2>
+                        <div id="score-1" class="player-1-score">0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Page Content -->
+        <!-- Scripts -->
+        <script type="text/javascript" src="app.js"></script>
+        <!-- End Scripts -->
+    </body>
+</html>

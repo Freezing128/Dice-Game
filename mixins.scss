@@ -1,0 +1,101 @@
+@mixin verticalGradient($fromColor, $toColor) 
+{
+    background-color: $toColor; /* Fallback Color */
+    background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+    background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
+    background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
+    background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
+    background-image:         linear-gradient(to bottom, $fromColor, $toColor);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+}
+@mixin transformSkew($deg)
+{
+    -webkit-transform: skew($deg);
+       -moz-transform: skew($deg);
+         -o-transform: skew($deg);
+            transform: skew($deg);
+}
+@mixin useFont ($fontName: 'Helvetica',$fontFallback: 'sans-serif',$fontWeight: 'normal',$fontStyle: 'normal',$fontSize: '100%') {
+    font-family: $fontName, $fontFallback;
+    font-weight: $fontWeight;
+    font-style: $fontStyle;
+    font-size: $fontSize;
+}
+@mixin universalFont ($font-size: '100%', $fontWeight: 'normal', $fontStyle: 'normal') {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+    font-size: $font-size;
+    font-weight: $fontWeight;
+    font-style: $fontStyle;
+}
+@mixin unified_element_padding ($padding: 20px)
+{
+    padding: $padding;
+    box-sizing: border-box;
+}
+
+@mixin container_setup($maxWidth: 1280px)
+{
+    max-width: $maxWidth;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+@mixin section_setup($paddingLeft,$paddingRight,$fontSize)
+{
+    padding-left: $paddingLeft;
+    padding-right: $paddingRight;
+    font-size: $fontSize;
+}
+
+// Media Query Mixins
+@mixin responsive_display_small_cellphone
+{
+    @media screen and (max-width: 479px) 
+    {
+		@content;
+	}
+}
+@mixin responsive_display_cellphone
+{
+    @media screen and (max-width: 767px) 
+    {
+		@content;
+	}
+}
+@mixin responsive_display_tablet 
+{
+    @media screen and (max-width: 1024px) 
+    {
+		@content;
+	}
+}
+@mixin responsive_display_laptop 
+{
+    @media screen and (max-width: 1280px) 
+    {
+		@content;
+	}
+}
+@mixin responsive_display_desktop
+{
+    @media screen and (max-width: 1920px) 
+    {
+		@content;
+	}
+}
+@mixin responsive_display_tv
+{
+    @media screen and (min-width: 1921px) 
+    {
+		@content;
+	}
+}
+@mixin responsive_display_2k
+{
+    @media screen and (min-width: 2560px) 
+    {
+		@content;
+	}
+}
