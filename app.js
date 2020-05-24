@@ -1,35 +1,7 @@
-/*
-Dice values:
-
-SINGLE
-one - 100
-five - 50
-
-THREE
-ones - 1000
-twos - 200
-threes - 300
-fours - 400
-fives - 500
-sixes - 600
-
-FOUR:
-ones - 2000
-twos - 400
-threes - 600
-fours - 800
-fives - 1000
-sixes - 1200
-
-FIVE:
-ones - 3000
-twos - 800
-threes - 1200
-fours - 1600
-fives - 2000
-sixes - 2400
-
-*/
+/* Dice game based on KCD variant
+ * JS aimed at basics & DOM manipulation
+ * @Author: Freezing
+ * @Date: 13/05/2020
 /*---------------------------------------------------------------------------------------------*/
 // Variables
 /*---------------------------------------------------------------------------------------------*/
@@ -476,3 +448,35 @@ function hideDice() {
         diceDOM[i].style.width = '0';
     }
 }
+/*
+Dice values:
+
+SINGLE
+one - 100
+five - 50
+
+THREE
+ones - 1000
+twos - 200
+threes - 300
+fours - 400
+fives - 500
+sixes - 600
+
+FOUR:
+ones - 2000
+twos - 400
+threes - 600
+fours - 800
+fives - 1000
+sixes - 1200
+
+FIVE:
+ones - 3000
+twos - 800
+threes - 1200
+fours - 1600
+fives - 2000
+sixes - 2400
+
+*/
